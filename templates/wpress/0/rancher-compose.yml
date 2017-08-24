@@ -1,0 +1,20 @@
+version: '2'
+catalog:
+  name: "Wordpress"
+  version: "1.0.0-rancher"
+  description: "Blog tool, publishing platform and CMS based on bitnami images"
+  uuid: Wordpress-1
+  minimum_rancher_version: v0.51.0
+  questions:    
+    - variable: root_password
+      description: "root password, set on first run"
+      label: "Root Password"
+      required: true
+      default: "123"
+      type: "string"
+    - variable: database_name
+      description: "Wordpress database name"
+      label: "Wordpress database name"
+      required: true
+      default: "wordpress"
+      type: "string"  

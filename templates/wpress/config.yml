@@ -1,0 +1,7 @@
+name: wpress
+description: |
+  a wordpress for readiness
+version: 1.0.0-rancher
+category: wpress
+maintainer:  lintaopeng@rancher.com
+license: GPL

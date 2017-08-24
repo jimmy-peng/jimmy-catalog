@@ -1,0 +1,18 @@
+version: '2'
+services:
+  db:
+      image: '10.175.191.142/rancher/mysql:5.5'
+      environment:
+        - MYSQL_ROOT_PASSWORD=${root_password}       
+        - MYSQL_DATABASE=${database_name}
+  wordpress:
+      image: '10.175.191.142/rancher/wordpress'
+      environment:
+        - MYSQL_ROOT_PASSWORD=${root_password}       
+        - MYSQL_DATABASE=${database_name}
+      links:
+        - db
+      ports:
+        - "8070:80"
+      depends_on:
+        - db 
